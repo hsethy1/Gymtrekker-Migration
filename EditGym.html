@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="CSS/EditGymDetails.css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Edit Gym Details</title>
+	
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script language="JavaScript" src="JS/EditGymDetails.js" type="text/javascript"></script>
+</head>
+
+<body>
+<table width="100%" border="0" cellspacing="0"><tbody><tr><td width="25%" class="ms-vb"><b>Title<span class="ms-formvalidation"> *</span>:</b></td><td width="75%" class="ms-vb gymName"><span dir="none">
+		<input title="Title Required Field" class="ms-long ms-spellcheck-true" type="text" size="60" maxlength="255">
+		<br>
+	</span></td></tr><tr><td width="25%" class="ms-vb"><b>Address<span class="ms-formvalidation"> *</span>:</b></td><td width="75%" class="ms-vb"><span dir="none">
+		<textarea title="Address Required Field" class="ms-long" dir="none" rows="5" cols="60"></textarea><br>
+	</span><span class="ms-metadata">Address of gym</span></td></tr><tr><td width="25%" class="ms-vb"><b>City:</b></td><td width="75%" class="ms-vb"><span dir="none"><select title="City Required Field" class="ms-RadioText">
+					<option value="Bangalore">Bangalore</option>
+					<option value="Chennai">Chennai</option>
+					<option value="Delhi">Delhi</option>
+					<option value="Hyderabad">Hyderabad</option>
+					<option value="Kolkata">Kolkata</option>
+					<option selected="selected" value="Mumbai">Mumbai</option>
+					<option value="Pune">Pune</option>
+
+				</select><br></span></td></tr><tr><td width="25%" class="ms-vb"><b>Locality:</b></td><td width="75%" class="ms-vb gymLocality"><span dir="none">
+		<input title="Locality" class="ms-long ms-spellcheck-true" type="text" size="40" maxlength="255"><br>
+	</span></td></tr><tr><td width="25%" class="ms-vb"><b>Country/Region:</b></td><td width="75%" class="ms-vb"><span dir="none">
+		<input title="Country/Region" class="ms-long ms-spellcheck-true" type="text" maxlength="255" value="India"><br>
+	</span></td></tr><tr><td width="25%" class="ms-vb"><b>ZIP/Postal Code:</b></td><td width="75%" class="ms-vb"><span dir="none">
+		<input title="ZIP/Postal Code" class="ms-long ms-spellcheck-true" type="text" maxlength="255"><br>
+	</span></td></tr><tr><td width="25%" class="ms-vb"><b>Contact Number:</b></td><td width="75%" class="ms-vb"><span dir="none">
+		<input title="Contact Number Required Field" class="ms-long ms-spellcheck-true" type="text" maxlength="255"><br>
+	</span></td></tr><tr><td width="25%" class="ms-vb"><b>Contact Email:</b></td><td width="75%" class="ms-vb"><span dir="none">
+		<input title="Contact Email Required Field" class="ms-long ms-spellcheck-true" type="text" size="60" maxlength="255"><br>
+	</span><span class="ms-metadata">Contact E-mail Address is the e-mail address of the person or group who is the contact person for the Gym.</span></td></tr><tr><td width="25%" class="ms-vb"><b>Gym Description:</b></td><td width="75%" class="ms-vb"><span dir="none">
+		<span dir="ltr">
+			<textarea title="Gym Description" class="ms-long" style="display: none;" dir="none" rows="6" cols="20"></textarea>
+			<iframe tabindex="-1" class="ms-rtetoolbarmenu" id="RTETextEditorPullDownMenu" src="/_layouts/15/images/blank.gif" style="display: none; position: absolute;" baseelementid="x" weblocale="x" buttonmnemonic="x"></iframe>
+		</span>
+	<span style="display: none;"></span>
+	<textarea title="Timing Required Field" class="ms-long" dir="none" rows="6" cols="80"></textarea>
+	</span></td>
+	</tr><tr><td width="25%" class="ms-vb"><b>Main Gym Images:</b><div id="HIContainer"><div class="ILDescTop">Upload Main Images for promotion of your Gym</div><div id="HIInputBox"><input class="HIInput"></div><div id="HIButton"><div id="AddHIButton">Add</div></div><div id="HIDisplayBox"><div class="HIcontainerAll"></div></div></div></td><td width="75%" class="ms-vb"><div id="HIBRowseButton">Browse</div><div class="displayNone"><span dir="none">
+		<textarea title="Upload Header Images" class="ms-long" dir="none" rows="6" cols="20"></textarea><br>
+	</span><span class="ms-metadata">Upload images of the gym and the promotions which you want to see on the top of the web page for your gym.</span></div></td></tr><tr><td width="25%" class="ms-vb"><b>Supporting Images:</b><div id="SDContainer"><div class="ILDescTop">Upload any supporting Images</div><div id="SDInputBox"><input class="SDInput"></div><div id="SDButton"><div id="AddSdButton">Add</div></div><div id="SDDisplayBox"><div class="SDcontainerAll"></div></div></div></td><td width="75%" class="ms-vb"><div id="SDBRowseButton">Browse</div><div class="displayNone"><span dir="none">
+		<textarea title="Supporting Images" class="ms-long" dir="none" rows="6" cols="20"></textarea><br>
+	</span></div></td></tr><tr><td width="25%" class="ms-vb"><b>Gym Amenities:</b></td><td width="75%" class="ms-vb"><span dir="none"><table cellspacing="1" cellpadding="0">
+					<tbody><tr>
+						<td><span title="Air Conditioned" class="ms-RadioText"><input type="checkbox"><label>Air Conditioned</label></span></td>
+					</tr><tr>
+						<td><span title="Wi-Fi Available" class="ms-RadioText"><input type="checkbox"><label>Wi-Fi Available</label></span></td>
+					</tr><tr>
+						<td><span title="Outdoor Training" class="ms-RadioText"><input type="checkbox"><label>Outdoor Training</label></span></td>
+					</tr><tr>
+						<td><span title="Jogging Circuit" class="ms-RadioText"><input type="checkbox"><label>Jogging Circuit</label></span></td>
+					</tr><tr>
+						<td><span title="Pool" class="ms-RadioText"><input type="checkbox"><label>Pool</label></span></td>
+					</tr><tr>
+						<td><span title="DJ Music" class="ms-RadioText"><input type="checkbox"><label>DJ Music</label></span></td>
+					</tr><tr>
+						<td><span title="Cycling Room" class="ms-RadioText"><input type="checkbox"><label>Cycling Room</label></span></td>
+					</tr><tr>
+						<td><span title="Yoga Room" class="ms-RadioText"><input type="checkbox"><label>Yoga Room</label></span></td>
+					</tr><tr>
+						<td><span title="Steam and Shower" class="ms-RadioText"><input type="checkbox"><label>Steam and Shower</label></span></td>
+					</tr><tr>
+						<td><span title="Spa and Sauna" class="ms-RadioText"><input type="checkbox"><label>Spa and Sauna</label></span></td>
+					</tr><tr>
+						<td><span title="24x7 Gym" class="ms-RadioText"><input type="checkbox"><label>24x7 Gym</label></span></td>
+					</tr><tr>
+						<td><span title="Snack bar" class="ms-RadioText"><input type="checkbox"><label>Snack bar</label></span></td>
+					</tr><tr>
+						<td><span title="Locker Room" class="ms-RadioText"><input type="checkbox"><label>Locker Room</label></span></td>
+					</tr><tr>
+						<td><span title="Free Parking" class="ms-RadioText"><input type="checkbox"><label>Free Parking</label></span></td>
+					</tr><tr>
+						<td><span title="Valet Parking" class="ms-RadioText"><input type="checkbox"><label>Valet Parking</label></span></td>
+					</tr><tr>
+						<td><span title="Changing Room" class="ms-RadioText"><input type="checkbox"><label>Changing Room</label></span></td>
+					</tr><tr>
+						<td><span title="Spinning Studio" class="ms-RadioText"><input type="checkbox"><label>Spinning Studio</label></span></td>
+					</tr><tr>
+						<td><span title="Aerobics Studio" class="ms-RadioText"><input type="checkbox"><label>Aerobics Studio</label></span></td>
+					</tr><tr>
+						<td><span title="Specify your own value:" class="ms-RadioText" onclick="ChangeFillinTextTabindex('ctl00_ctl42_g_97c59b3b_7bd6_457a_afc4_07cbdcf76126_ff15_1_ctl00_ctl19','ctl00_ctl42_g_97c59b3b_7bd6_457a_afc4_07cbdcf76126_ff15_1_ctl00_ctl18')"><input type="checkbox"><label>Specify your own value:</label></span></td>
+					</tr><tr>
+						<td>&nbsp;&nbsp;&nbsp;<input tabindex="-1" title="Gym Amenities : Specify your own value:" onclick="SetChoiceOption('ctl00_ctl42_g_97c59b3b_7bd6_457a_afc4_07cbdcf76126_ff15_1_ctl00_ctl18')" onfocus="SetChoiceOption('ctl00_ctl42_g_97c59b3b_7bd6_457a_afc4_07cbdcf76126_ff15_1_ctl00_ctl18')" type="text" maxlength="255"></td>
+					</tr>
+				</tbody></table></span></td></tr><tr><td width="25%" class="ms-vb"><b>Timing:</b></td><td width="75%" class="ms-vb"><span dir="none">
+		<textarea title="Timing Required Field" class="ms-long" dir="none" rows="6" cols="60"></textarea><br>
+	</span><span class="ms-metadata">Morning to Night</span></td></tr><tr><td width="25%" class="ms-vb"><b>Cardiovascular Training Equipments:</b></td><td width="75%" class="ms-vb"><div class="GymEquipment"><span dir="none"><table cellspacing="1" cellpadding="0">
+					<tbody><tr>
+						<td><span title="Treadmill" class="ms-RadioText"><input type="checkbox"><label>Treadmill</label></span></td>
+					</tr><tr>
+						<td><span title="Spin Bikes" class="ms-RadioText"><input type="checkbox"><label>Spin Bikes</label></span></td>
+					</tr><tr>
+						<td><span title="Cross Trainers" class="ms-RadioText"><input type="checkbox"><label>Cross Trainers</label></span></td>
+					</tr><tr>
+						<td><span title="Rowers" class="ms-RadioText"><input type="checkbox"><label>Rowers</label></span></td>
+					</tr><tr>
+						<td><span title="Steppers" class="ms-RadioText"><input type="checkbox"><label>Steppers</label></span></td>
+					</tr><tr>
+						<td><span title="Upright Cycle" class="ms-RadioText"><input type="checkbox"><label>Upright Cycle</label></span></td>
+					</tr><tr>
+						<td><span title="Rowing Machine" class="ms-RadioText"><input type="checkbox"><label>Rowing Machine</label></span></td>
+					</tr><tr>
+						<td><span title="Jacob Ladder" class="ms-RadioText"><input type="checkbox"><label>Jacob Ladder</label></span></td>
+					</tr><tr>
+						<td><span title="Arc Cycle" class="ms-RadioText"><input type="checkbox"><label>Arc Cycle</label></span></td>
+					</tr><tr>
+						<td><span title="Specify your own value:" class="ms-RadioText" onclick="ChangeFillinTextTabindex('ctl00_ctl42_g_97c59b3b_7bd6_457a_afc4_07cbdcf76126_ff17_1_ctl00_ctl10','ctl00_ctl42_g_97c59b3b_7bd6_457a_afc4_07cbdcf76126_ff17_1_ctl00_ctl09')"><input type="checkbox"><label>Specify your own value:</label></span></td>
+					</tr><tr>
+						<td>&nbsp;&nbsp;&nbsp;<input tabindex="-1" title="Cardiovascular Training Equipments Required Field : Specify your own value:" onclick="SetChoiceOption('ctl00_ctl42_g_97c59b3b_7bd6_457a_afc4_07cbdcf76126_ff17_1_ctl00_ctl09')" onfocus="SetChoiceOption('ctl00_ctl42_g_97c59b3b_7bd6_457a_afc4_07cbdcf76126_ff17_1_ctl00_ctl09')" type="text" maxlength="255"></td>
+					</tr>
+				</tbody></table></span></div></td></tr><tr><td width="25%" class="ms-vb"><b>Strength Training Machines:</b></td><td width="75%" class="ms-vb"><div class="GymEquipment"><span dir="none"><table cellspacing="1" cellpadding="0">
+					<tbody><tr>
+						<td><span title="8 StackMultistation" class="ms-RadioText"><input type="checkbox"><label>8 StackMultistation</label></span></td>
+					</tr><tr>
+						<td><span title="Pec Fly" class="ms-RadioText"><input type="checkbox"><label>Pec Fly</label></span></td>
+					</tr><tr>
+						<td><span title="Lateral Raise" class="ms-RadioText"><input type="checkbox"><label>Lateral Raise</label></span></td>
+					</tr><tr>
+						<td><span title="Rear Delt Fly" class="ms-RadioText"><input type="checkbox"><label>Rear Delt Fly</label></span></td>
+					</tr><tr>
+						<td><span title="Lat Pull" class="ms-RadioText"><input type="checkbox"><label>Lat Pull</label></span></td>
+					</tr><tr>
+						<td><span title="Seated Row" class="ms-RadioText"><input type="checkbox"><label>Seated Row</label></span></td>
+					</tr><tr>
+						<td><span title="Arm Curl" class="ms-RadioText"><input type="checkbox"><label>Arm Curl</label></span></td>
+					</tr><tr>
+						<td><span title="Seated Dip" class="ms-RadioText"><input type="checkbox"><label>Seated Dip</label></span></td>
+					</tr><tr>
+						<td><span title="Leg Press" class="ms-RadioText"><input type="checkbox"><label>Leg Press</label></span></td>
+					</tr><tr>
+						<td><span title="Leg Extension" class="ms-RadioText"><input type="checkbox"><label>Leg Extension</label></span></td>
+					</tr><tr>
+						<td><span title="Seated Leg Curl" class="ms-RadioText"><input type="checkbox"><label>Seated Leg Curl</label></span></td>
+					</tr><tr>
+						<td><span title="Calf Press" class="ms-RadioText"><input type="checkbox"><label>Calf Press</label></span></td>
+					</tr><tr>
+						<td><span title="Dumbell Rack" class="ms-RadioText"><input type="checkbox"><label>Dumbell Rack</label></span></td>
+					</tr><tr>
+						<td><span title="Chest Press" class="ms-RadioText"><input type="checkbox"><label>Chest Press</label></span></td>
+					</tr><tr>
+						<td><span title="Shoulder Press" class="ms-RadioText"><input type="checkbox"><label>Shoulder Press</label></span></td>
+					</tr><tr>
+						<td><span title="Back extension" class="ms-RadioText"><input type="checkbox"><label>Back extension</label></span></td>
+					</tr><tr>
+						<td><span title="Tricep Extension" class="ms-RadioText"><input type="checkbox"><label>Tricep Extension</label></span></td>
+					</tr><tr>
+						<td><span title="Multi Adjustable Bench" class="ms-RadioText"><input type="checkbox"><label>Multi Adjustable Bench</label></span></td>
+					</tr><tr>
+						<td><span title="Flat Bench" class="ms-RadioText"><input type="checkbox"><label>Flat Bench</label></span></td>
+					</tr><tr>
+						<td><span title="Abdominle" class="ms-RadioText"><input type="checkbox"><label>Abdominle</label></span></td>
+					</tr>
+				</tbody></table></span></div></td></tr><tr class="displayNone"><td width="25%" class="ms-vb"><b>Gym Equipment Count:</b></td><td width="75%" class="ms-vb"><span dir="none">
+		<textarea title="Gym Equipment Count" class="ms-long" dir="none" rows="6" cols="60">{}</textarea><br>
+	</span></td></tr><tr><td width="25%" class="ms-vb"><b>Gym opens for:</b></td><td width="75%" class="ms-vb"><span dir="none"><select title="Gym type Required Field" class="ms-RadioText">
+					<option value="Only for Women">Only for Women</option>
+					<option value="Only for Men">Only for Men</option>
+					<option selected="selected" value="Unisex">Unisex</option>
+
+				</select><br></span><span class="ms-metadata">Whether open for unisex or only ladies or only men</span></td></tr><tr><td width="25%" class="ms-vb"><b>Locations in Mumbai:</b></td><td width="75%" class="ms-vb"><span dir="none">
+		<input title="Locations in Mumbai" class="ms-input" style="-ms-ime-mode: inactive;" type="text" size="11" ><br>
+	</span><span class="ms-metadata">If you have multiple locations</span></td></tr><tr><td width="25%" class="ms-vb"><b>Capacity (Number of Members):</b></td><td width="75%" class="ms-vb"><span dir="none">
+		<input title="Capacity (Number of Members) Required Field" class="ms-input" style="-ms-ime-mode: inactive;" type="text" size="11" ><br>
+	</span><span class="ms-metadata">Give an average of existing gym members</span></td></tr><tr><td width="25%" class="ms-vb"><b>Floor Trainers:</b></td><td width="75%" class="ms-vb"><span dir="none">
+		<input title="Floor Trainers Required Field" class="ms-input" style="-ms-ime-mode: inactive;" type="text" size="11" ><br>
+	</span><span class="ms-metadata">Number of floor trainers in the gym</span></td></tr><tr><td width="25%" class="ms-vb"><b>Personal Trainers:</b></td><td width="75%" class="ms-vb"><span dir="none">
+		<input title="Personal Trainers" class="ms-input" style="-ms-ime-mode: inactive;" type="text" size="11" ><br>
+	</span><span class="ms-metadata">Number of Personal Trainers</span></td></tr><tr><td width="25%" class="ms-vb"><b>Type of Membership offered:</b></td><td width="75%" class="ms-vb"><div class="MembershipOffered"><span dir="none"><table cellspacing="1" cellpadding="0">
+					<tbody><tr>
+						<td><span title="Monthly" class="ms-RadioText"><input type="checkbox"><label>Monthly</label></span></td>
+					</tr><tr>
+						<td><span title="Quarterly" class="ms-RadioText"><input type="checkbox"><label>Quarterly</label></span></td>
+					</tr><tr>
+						<td><span title="Half-yearly" class="ms-RadioText"><input type="checkbox"><label>Half-yearly</label></span></td>
+					</tr><tr>
+						<td><span title="Annually" class="ms-RadioText"><input type="checkbox"><label>Annually</label></span></td>
+					</tr><tr>
+						<td><span title="Bi Annually" class="ms-RadioText"><input type="checkbox"><label>Bi Annually</label></span></td>
+					</tr><tr>
+						<td><span title="Life Time membership" class="ms-RadioText"><input type="checkbox"><label>Life Time membership</label></span></td>
+					</tr>
+				</tbody></table></span></div></td></tr><tr class="displayNone"><td width="25%" class="ms-vb"><b>Membership Amount:</b></td><td width="75%" class="ms-vb"><span dir="none">
+		<textarea title="Membership Amount" class="ms-long" dir="none" rows="6" cols="60">{}</textarea><br>
+	</span><span class="ms-metadata">Enter the amount for membership offered by your gym</span></td></tr><tr><td width="25%" class="ms-vb"><b>Membership Transferable:</b></td><td width="75%" class="ms-vb"><span dir="none">
+		<input type="checkbox"><br>
+	</span><span class="ms-metadata">whether membership is transferable and after what period</span></td></tr><tr><td width="25%" class="ms-vb"><b>Type of Gym:</b></td><td width="75%" class="ms-vb"><span dir="none"><select title="Type of Gym Required Field" class="ms-RadioText">
+					<option selected="selected" value="Indoor Gym">Indoor Gym</option>
+					<option value="Outdoor Gym">Outdoor Gym</option>
+					<option value="Rooftop Gym">Rooftop Gym</option>
+					<option value="Hotel Gym">Hotel Gym</option>
+					<option value="Gym with Pool">Gym with Pool</option>
+					<option value="Gym with Restaurant">Gym with Restaurant</option>
+					<option value="Gym with Other Sport activities">Gym with Other Sport activities</option>
+
+				</select><br></span></td></tr><tr><td width="25%" class="ms-vb"><b>Other Classes:</b></td><td width="75%" class="ms-vb"><span dir="none"><table cellspacing="1" cellpadding="0">
+					<tbody><tr>
+						<td><span title="Power Yoga" class="ms-RadioText"><input type="checkbox"><label>Power Yoga</label></span></td>
+					</tr><tr>
+						<td><span title="Yoga" class="ms-RadioText"><input type="checkbox"><label>Yoga</label></span></td>
+					</tr><tr>
+						<td><span title="Kick Boxing" class="ms-RadioText"><input type="checkbox"><label>Kick Boxing</label></span></td>
+					</tr><tr>
+						<td><span title="Aerobics" class="ms-RadioText"><input type="checkbox"><label>Aerobics</label></span></td>
+					</tr><tr>
+						<td><span title="zumba" class="ms-RadioText"><input type="checkbox"><label>zumba</label></span></td>
+					</tr><tr>
+						<td><span title="Taekwondo" class="ms-RadioText"><input type="checkbox"><label>Taekwondo</label></span></td>
+					</tr>
+				</tbody></table></span></td></tr><tr><td width="25%" class="ms-vb"><b>Compilation Features:</b></td><td width="75%" class="ms-vb"><span dir="none"><table cellspacing="1" cellpadding="0">
+					<tbody><tr>
+						<td><span title="Trending this week" class="ms-RadioText"><input type="checkbox"><label>Trending this week</label></span></td>
+					</tr><tr>
+						<td><span title="5 star hotel gym" class="ms-RadioText"><input type="checkbox"><label>5 star hotel gym</label></span></td>
+					</tr><tr>
+						<td><span title="5 star franchise gym" class="ms-RadioText"><input type="checkbox"><label>5 star franchise gym</label></span></td>
+					</tr><tr>
+						<td><span title="Rooftop gym" class="ms-RadioText"><input type="checkbox"><label>Rooftop gym</label></span></td>
+					</tr><tr>
+						<td><span title="Gym with pool and DJ" class="ms-RadioText"><input type="checkbox"><label>Gym with pool and DJ</label></span></td>
+					</tr><tr>
+						<td><span title="Gym with aerobics zumba and kick boxing" class="ms-RadioText"><input type="checkbox"><label>Gym with aerobics zumba and kick boxing</label></span></td>
+					</tr><tr>
+						<td><span title="Gym with celeb spotting" class="ms-RadioText"><input type="checkbox"><label>Gym with celeb spotting</label></span></td>
+					</tr><tr>
+						<td><span title="Student favorite gym" class="ms-RadioText"><input type="checkbox"><label>Student favorite gym</label></span></td>
+					</tr><tr>
+						<td><span title="Gym with yoga and power yoga" class="ms-RadioText"><input type="checkbox"><label>Gym with yoga and power yoga</label></span></td>
+					</tr><tr>
+						<td><span title="Pocket friendly gym" class="ms-RadioText"><input type="checkbox"><label>Pocket friendly gym</label></span></td>
+					</tr><tr>
+						<td><span title="Hidden gym spots &amp; gems" class="ms-RadioText"><input type="checkbox"><label>Hidden gym spots &amp; gems</label></span></td>
+					</tr><tr>
+						<td><span title="24x7 gyms" class="ms-RadioText"><input type="checkbox"><label>24x7 gyms</label></span></td>
+					</tr>
+				</tbody></table></span></td></tr><tr><td width="25%" class="ms-vb"><b>virtual tour embeded url:</b></td><td width="75%" class="ms-vb"><span dir="none">
+		<input title="virtual tour embeded url" class="ms-long" dir="none" type="text" size="80">
+		<br>
+	</span></td></tr><tr><td width="25%" class="ms-vb"><b>video embeded url:</b></td><td width="75%" class="ms-vb"><span dir="none">
+		<input title="Iframe video" class="ms-long" dir="none" type="text" size="80">
+		<br>
+	</span></td></tr><tr><td width="25%" class="ms-vb"><b>IsFreeSessionAvailable:</b></td><td width="75%" class="ms-vb"><span dir="none">
+		<input type="checkbox"><br>
+	</span></td></tr><tr><td width="25%" class="ms-vb"><b>IsPaymentGatewayAvailable:</b></td><td width="75%" class="ms-vb"><span dir="none">
+		<input type="checkbox"><br>
+	</span></td></tr><tr><td width="25%" class="ms-vb"><b>isActive:</b></td><td width="75%" class="ms-vb"><span dir="none">
+		<input type="checkbox"><br>
+	</span></td></tr></tbody></table>
+	</body>
+</html>
